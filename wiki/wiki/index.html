@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Main Wiki - Fusion Engine</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Fusion Engine</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../" class="nav-link">Wiki</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../api/" class="nav-link">Api</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../tutorials/" class="nav-link">Tutorial</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#main-wiki" class="nav-link">Main Wiki</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#create-window" class="nav-link">Create window</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#start-loop" class="nav-link">Start loop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#default-message" class="nav-link">Default message</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#set-background-color" class="nav-link">Set Background color</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deltatime" class="nav-link">DeltaTime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#predefined-shapes" class="nav-link">Predefined shapes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#window-icon" class="nav-link">Window icon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#set-fps" class="nav-link">Set FPS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vectors" class="nav-link">Vectors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#draw-a-line" class="nav-link">Draw a line</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#draw-rectangle" class="nav-link">Draw rectangle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#draw-image" class="nav-link">Draw image</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-entity-warning-pre-alpha-its-in-really-early-stages" class="nav-link">Create entity WARNING: PRE ALPHA (It's in really early stages)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sound" class="nav-link">Sound</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#storage-system" class="nav-link">Storage system</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#keyboard-input" class="nav-link">Keyboard input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#user-interface-ui" class="nav-link">User Interface (UI)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-pygame" class="nav-link">Using pygame</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quit" class="nav-link">Quit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="main-wiki">Main Wiki</h1>
+<ul>
+<li><a href="#create-window">Create Window</a></li>
+<li><a href="#start-loop">Start Loop</a></li>
+<li><a href="#default-message">Default Message</a></li>
+<li><a href="#set-background-color">Set Background Color</a></li>
+<li><a href="#deltatime">DeltaTime</a></li>
+<li><a href="#predefined-shapes">Predefined Shapes</a></li>
+<li><a href="#window-icon">Window Icon</a></li>
+<li><a href="#set-fps">Set FPS</a></li>
+<li><a href="#vectors">Vectors</a><ul>
+<li><a href="#vector2d">Vector2d</a></li>
+</ul>
+</li>
+<li><a href="#draw-a-line">Draw a Line</a></li>
+<li><a href="#draw-rectangle">Draw Rectangle</a></li>
+<li><a href="#draw-image">Draw Image</a></li>
+<li><a href="#create-entity">Create Entity</a><ul>
+<li><a href="#draw-rect-with-entity">Draw Rect with Entity</a></li>
+<li><a href="#draw-image-with-entity">Draw Image with Entity</a></li>
+</ul>
+</li>
+<li><a href="#sound">Sound</a><ul>
+<li><a href="#load-sound">Load Sound</a></li>
+<li><a href="#play-sound">Play Sound</a></li>
+<li><a href="#stop-sound">Stop Sound</a></li>
+<li><a href="#background-music">Background Music</a></li>
+</ul>
+</li>
+<li><a href="#storage-system">Storage System</a><ul>
+<li><a href="#init">Init</a></li>
+<li><a href="#insertion">Insertion</a></li>
+<li><a href="#reading">Reading</a></li>
+<li><a href="#updating">Updating</a></li>
+<li><a href="#deleting">Deleting</a></li>
+<li><a href="#saving-to-disk">Saving to Disk</a></li>
+</ul>
+</li>
+<li><a href="#keyboard-input">Keyboard Input</a></li>
+<li><a href="#user-interface-ui">User Interface (UI)</a><ul>
+<li><a href="#buttons">Buttons</a><ul>
+<li><a href="#button-clicked">Button Clicked</a></li>
+</ul>
+</li>
+<li><a href="#rendering-text">Rendering Text</a></li>
+</ul>
+</li>
+<li><a href="#using-pygame">Using Pygame</a></li>
+<li><a href="#quit">Quit</a></li>
+</ul>
+<h2 id="create-window">Create window</h2>
+<p>To create a window were thing are draw, then you need to use this:</p>
+<pre><code class="language-python">window = main.window.new_window(&quot;Example: 1&quot;, 800, 600)
+</code></pre>
+<h2 id="start-loop">Start loop</h2>
+<p>In a loop you can draw things and it will run with the FPS that is setup. To start a loop, you have two choices:</p>
+<p>Choice 1:</p>
+<pre><code class="language-python">@main.window.loop
+def loop():
+    ... # Your own loop things
+</code></pre>
+<p>Choice 2:</p>
+<pre><code class="language-python">while main.window.running(window):
+    ... # Your own loop thing
+
+</code></pre>
+<p>There is basically no difference, they all are doing the same thing, you use what you prefer. In our examples we use choice 1.</p>
+<h2 id="default-message">Default message</h2>
+<p>If you tried using our engine you may have encountered this message being printed to terminal:</p>
+<pre><code class="language-bash">Fusion Engine 1.0.2 (Pygame-ce 2.3.0, Python 3.11.4)
+Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine
+</code></pre>
+<p>To disable this behavior, you just give the main class when initting this argument: <code>message=False</code>, like this:</p>
+<pre><code class="language-python">import fusionengine as fusion
+
+main = fusion.Main(&quot;message=False&quot;)
+</code></pre>
+<h2 id="set-background-color">Set Background color</h2>
+<p>If you want to set a background color, you use this function before all draw functions:</p>
+<pre><code class="language-python">main.draw.set_background_color(window, main.color.WHITE)
+</code></pre>
+<h2 id="deltatime">DeltaTime</h2>
+<p>if you want to access delta time, you use this:</p>
+<pre><code class="language-python">main.window.DELTATIME
+</code></pre>
+<h2 id="predefined-shapes">Predefined shapes</h2>
+<p>We have some predefined shapes that can be used and be drew on the screen. Here are some:</p>
+<p>Rectangle:</p>
+<pre><code class="language-python">main.shape.new_rect(x, y, width, height, color)
+</code></pre>
+<ul>
+<li>More shapes will be coming soon</li>
+</ul>
+<h2 id="window-icon">Window icon</h2>
+<p>So you want to change the icon of your window? Well, its easy:</p>
+<pre><code class="language-python">main.window.change_icon(&quot;path_to_icon&quot;)
+</code></pre>
+<h2 id="set-fps">Set FPS</h2>
+<p>To set the framerate of your window, you use this:</p>
+<pre><code class="language-python">main.window.set_fps(60)
+
+</code></pre>
+<h2 id="vectors">Vectors</h2>
+<h3 id="vector2d">Vector2d</h3>
+<p>If you want to create a 2d vector that stores x and y, then you do this:</p>
+<pre><code class="language-python">
+vector = main.vector.new_vector2d(10, 10)
+</code></pre>
+<h2 id="draw-a-line">Draw a line</h2>
+<p>To draw a line, you use this:</p>
+<pre><code class="language-python">#                           x1   y1   x2   y2       color
+main.draw.draw_line(window, 100, 100, 200, 200, main.color.BLUE)
+</code></pre>
+<h2 id="draw-rectangle">Draw rectangle</h2>
+<p>If you just want to draw a rectangle to test or to use it for your game/app, then you have 3 options:</p>
+<p>Option one: just draw a rectangle</p>
+<pre><code class="language-python">main.draw.draw_rect(window, 100, 100, 400, 400, main.color.BLUE)
+</code></pre>
+<p>Second option: draw predefined rectangle:</p>
+<pre><code class="language-python">main.draw.draw_own_rect(window, your_rect)
+</code></pre>
+<p>Third option: Draw a rectangle of lines</p>
+<pre><code class="language-python">#                                 x    y    w    h        color
+main.draw.draw_line_rect(window, 100, 100, 400, 400, main.color.BLUE)
+</code></pre>
+<h2 id="draw-image">Draw image</h2>
+<p>You first need to create a variable with your image and image data:</p>
+<pre><code class="language-python">image = main.image.open_image(window, main.DEBUGIMAGE, 100, 100, 400, 400)
+</code></pre>
+<p>main.DEBUGIMAGE is an image that is included with the engine, so you can use it freely.
+Then you need to render it (In the best situation this will happen in your loop):</p>
+<pre><code class="language-python">main.image.draw_image(image)
+</code></pre>
+<h2 id="create-entity-warning-pre-alpha-its-in-really-early-stages">Create entity WARNING: PRE ALPHA (It's in really early stages)</h2>
+<p>If you want a player or an enemy or some moving object in your game, you can use an entity, thats an object that
+helps you manage things in your game:</p>
+<pre><code class="language-python">#                                  x    y    w   h
+entity = main.body.Entity(window, 100, 100, 50, 50)
+</code></pre>
+<h3 id="draw-rect-with-entity">Draw rect with entity</h3>
+<p>If you want to draw a rectangle that is basically in your entity, then you do it like this:</p>
+<pre><code class="language-python">entity.draw_image(main.color.BLACK)
+
+</code></pre>
+<h3 id="draw-image-with-entity">Draw image with entity</h3>
+<p>If you want to draw a image on your entity, then you do this:</p>
+<pre><code class="language-python">entity.image(&quot;image_path&quot;)
+</code></pre>
+<h2 id="sound">Sound</h2>
+<h3 id="load-sound">Load sound</h3>
+<p>To load a sound you do this:</p>
+<pre><code class="language-python">your_sound = main.sound.load_sound(&quot;path_to_sound&quot;)
+</code></pre>
+<h3 id="play-sound">Play sound</h3>
+<p>To play your loaded sound you use this:</p>
+<pre><code class="language-python">your_sound.play()
+</code></pre>
+<h3 id="stop-sound">Stop sound</h3>
+<p>To stop your playing sound you use this:</p>
+<pre><code class="language-python">your_sound.stop()
+</code></pre>
+<h3 id="backround-music">Backround music</h3>
+<p>To start playing background music you use this:</p>
+<pre><code class="language-python">main.sound.play_background_music(&quot;path_to_sound&quot;)
+</code></pre>
+<h2 id="storage-system">Storage system</h2>
+<h3 id="init">Init</h3>
+<pre><code class="language-python">my_db = JsonStorage(&quot;my_db.json&quot;)
+</code></pre>
+<p>This how you initialize your json storage system</p>
+<h3 id="insertion">Insertion</h3>
+<pre><code class="language-python">my_db.insert({&quot;first_name&quot;: &quot;john&quot;, &quot;last_name&quot;: &quot;wick&quot;, &quot;gold&quot;: 50})
+my_db.insert({&quot;first_name&quot;: &quot;alexander&quot;, &quot;last_name&quot;: &quot;wick&quot;, &quot;gold&quot;: 20})
+</code></pre>
+<p>The code inserts two entries into the storage. The inserted data contains information about individuals' first names, last names, and gold amounts.</p>
+<h3 id="reading">Reading</h3>
+<pre><code class="language-python">Copy code
+my_db.search({&quot;last_name&quot;: &quot;wick&quot;})
+my_db.search({&quot;last_name&quot;: &quot;wick&quot;}, get_index=True)
+</code></pre>
+<p>The code demonstrates reading operations. It searches for entries with the last name "wick" and retrieves results with and without index information.</p>
+<h3 id="updating">Updating</h3>
+<pre><code class="language-python">alex['gold'] += 20
+my_db.update(alex_index, alex)
+</code></pre>
+<p>The code showcases how to update data in the storage. In this case, it increases the "gold" value for an entry with the first name "alexander" by 20.</p>
+<h3 id="deleting">Deleting</h3>
+<pre><code class="language-python">my_db.delete(john_index)
+</code></pre>
+<p>The code demonstrates deletion of data by removing an entry with the first name "john" from the storage.</p>
+<h3 id="saving-to-disk">Saving to Disk</h3>
+<pre><code class="language-python">my_db.save()
+</code></pre>
+<p>The code shows how to save the modified data back to the storage file on disk.</p>
+<h2 id="keyboard-input">Keyboard input</h2>
+<p>if you need keyboard input, then use this if statement with your own key (see key tab for all key names):</p>
+<pre><code class="language-python"> if main.event.key_down(main.keys.KEY_a):
+     print(&quot;Key A pressed&quot;)
+</code></pre>
+<h2 id="user-interface-ui">User Interface (UI)</h2>
+<p>Creating a small ui for your application/game is easy with our following tools:</p>
+<h3 id="buttons">Buttons</h3>
+<p>To create a simple button we do the following:</p>
+<pre><code class="language-python">
+# Create the button outside the loop
+button = main.ui.button.new_button(
+    window,
+    main.shape.new_rect_button(200, 200, 200, 200),
+    &quot;Hello World&quot;
+)
+
+</code></pre>
+<h4 id="button-clicked">Button clicked</h4>
+<p>If you want to check if your button was pressed or is being pressed, then you do that this way:</p>
+<pre><code class="language-python">@main.window.loop
+def loop():
+    if button.button_pressed():
+        ... # Do your stuff
+</code></pre>
+<h3 id="rendering-text">Rendering text</h3>
+<p>If you want to render some fonts, then you can do it like this:</p>
+<ul>
+<li>Option 1: Render text with build into fusion or your own font</li>
+</ul>
+<pre><code class="language-python">#                                            x   y         font              size      color
+main.ui.text.print_text(window, &quot;Your text&quot;, 10, 10, main.fonts.NUNITO_LIGHT, 20, main.color.WHITE)
+</code></pre>
+<ul>
+<li>Option 2: Render text with system font
+Its the same option 1, but you change the font to name of the font, like this:</li>
+</ul>
+<pre><code class="language-python">main.ui.text.print_text(window, &quot;Your text&quot;, 10, 10, &quot;Arial&quot;, 20, main.color.WHITE)
+</code></pre>
+<h2 id="using-pygame">Using pygame</h2>
+<p>If you cant find some function you need in this engine, the you could use pygame as the engine is build on pygame. You dont need to import pygame, as that can make so issues, you just use:</p>
+<pre><code class="language-python">fusion.pg
+</code></pre>
+<p>Make sure your not using main (the initialized class) but the module itself.</p>
+<h2 id="quit">Quit</h2>
+<p>The quitting of the engine is done automaticly for you, so you dont have to worry about it.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
