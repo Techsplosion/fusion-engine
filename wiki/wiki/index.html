@@ -191,7 +191,11 @@
 <li><a href="#saving-to-disk">Saving to Disk</a></li>
 </ul>
 </li>
-<li><a href="#keyboard-input">Keyboard Input</a></li>
+<li><a href="#keyboard-input">Keyboard Input</a><ul>
+<li><a href="#keydown">Keydown</a></li>
+<li><a href="#keydown-once">Keydown Once</a></li>
+</ul>
+</li>
 <li><a href="#user-interface-ui">User Interface (UI)</a><ul>
 <li><a href="#buttons">Buttons</a><ul>
 <li><a href="#button-clicked">Button Clicked</a></li>
@@ -348,9 +352,15 @@ my_db.update(alex_index, alex)
 </code></pre>
 <p>The code shows how to save the modified data back to the storage file on disk.</p>
 <h2 id="keyboard-input">Keyboard input</h2>
+<h3 id="keydown">Keydown</h3>
 <p>if you need keyboard input, then use this if statement with your own key (see key tab for all key names):</p>
 <pre><code class="language-python"> if main.event.key_down(main.keys.KEY_a):
      print(&quot;Key A pressed&quot;)
+</code></pre>
+<h3 id="keydown-once">Keydown once</h3>
+<p>If you need keydown to be only once, then you use this:</p>
+<pre><code class="language-python">if main.event.key_down_once(main.keys.KEY_a):
+    print(&quot;Key A pressed&quot;)
 </code></pre>
 <h2 id="user-interface-ui">User Interface (UI)</h2>
 <p>Creating a small ui for your application/game is easy with our following tools:</p>
