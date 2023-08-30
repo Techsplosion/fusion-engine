@@ -356,6 +356,9 @@
 <p>Make sure your not using main (the initialized class) but the module itself.</p>
 <h2 id="using-codon-compiler">Using Codon Compiler</h2>
 <p>So you heard of <a href="https://docs.exaloop.io/codon/">codon</a>, a python compiler with can compile your python code to machine code, which makes your code a lot faster But how do you use it? Well, its easy! You just install it and then modify these things in your code:</p>
+<p>Imports:</p>
+<pre><code class="language-python">from python import fusionengine as fusion
+</code></pre>
 <p>Loop:
 You need to modify our loop to support codon, so you need to change it to this:</p>
 <pre><code class="language-python">while main.window.running(window):
