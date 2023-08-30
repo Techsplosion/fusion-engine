@@ -16,7 +16,7 @@
     
     
       
-        <title>Basic rendering tutorial - Fusion Engine Documentation</title>
+        <title>3.0.0 Todo/Changelog - Fusion Engine Documentation</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-rendering-tutorial" class="md-skip">
+        <a href="#300-todochangelog" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic rendering tutorial
+              3.0.0 Todo/Changelog
             
           </span>
         </div>
@@ -270,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../tutorials/" class="md-nav__link">
         Tutorial
       </a>
     </li>
@@ -296,63 +296,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-window" class="md-nav__link">
-    Creating a window
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pre-loading-image" class="md-nav__link">
-    Pre-loading image
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-a-loop" class="md-nav__link">
-    Starting a loop
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drawing-image" class="md-nav__link">
-    Drawing image
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#full-code" class="md-nav__link">
-    Full code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ending" class="md-nav__link">
-    Ending
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -363,58 +306,48 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dimkauzh/fusion-engine/edit/master/docs/tutorials/basics.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dimkauzh/fusion-engine/edit/master/docs/changelog/3_0_0.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="basic-rendering-tutorial">Basic rendering tutorial</h1>
-<h2 id="introduction">Introduction</h2>
-<p>This is a tutorial so you would understand the basics of the engine and how it works. In this tutorial we will learn how to render a window and draw some images on it. If you want to learn more, then go to <a href="https://docs.fusion-engine.tech">our docs</a> and select wiki.</p>
-<p>This tutorial also expect you to have everything setup, if not, head over to <a href="../setup/">tutorial 1: setting everything up</a></p>
-<p>The Final Product Should Look like This:
-<img alt="gif" src="https://u.cubeupload.com/Mr_rudy/20230825184950.gif" /></p>
-<h2 id="creating-a-window">Creating a window</h2>
-<p>So if you read tutorial 1 you know we have the main variable running our engine object. So now we create a window with the help of that main object:</p>
-<pre><code class="language-python">window = main.window.new_window(&quot;Tutorial 2&quot;, 600, 600)
-</code></pre>
-<p>The first argument that we give our function is our title, second argument is our width and third one is height</p>
-<h2 id="pre-loading-image">Pre-loading image</h2>
-<p>We will now pre-load a image so we can draw it later on our window. We do it like this:</p>
-<pre><code class="language-python">image = main.image.open_image(window, main.debug.DEBUGIMAGE, 0, 0, 600, 600)
-</code></pre>
-<p>Fist argument is our window, second is our image path, third is our x position, fourth is our y position, fifth is our width and sixth is our height. As you maybe see were using main.debug.DEBUGIMAGE, which is a build in image into our engine for testing purposes. We will use it for our tutorial</p>
-<h2 id="starting-a-loop">Starting a loop</h2>
-<p>A loop is basicly what lets our window be open the whole time and not be automaticly closed. You also run there functions that need to ran every frame. So we start a loop like this:</p>
-<pre><code class="language-python">@main.window.loop
-def loop():
-    ... # Code goes here
-
-</code></pre>
-<h2 id="drawing-image">Drawing image</h2>
-<p>So we still need to draw our image after loading it, and you can do that easily inside a loop like this:</p>
-<pre><code class="language-python">@main.window.loop
-def loop():
-    main.image.draw_image(image)
-
-</code></pre>
-<p>As you see we have a draw_image function in our loop with the image loaded image as argument.</p>
-<h2 id="full-code">Full code</h2>
-<p>Here is our full code that we could through this tutorial:</p>
-<pre><code class="language-python">import fusionengine as fusion
-
-main = fusion.Main()
-
-window = main.window.new_window(&quot;Example: 1&quot;, 600, 600)
-image = main.image.open_image(window, main.debug.DEBUGIMAGE, 0, 0, 600, 600)
-
-
-@main.window.loop
-def loop():
-    main.image.draw_image(image)
-</code></pre>
-<h2 id="ending">Ending</h2>
-<p>This was our basic tutorial to images. There are (or will be) more tutorials, so check them our. Or otherwise you could check our <a href="https://docs.fusion-engine.tech">docs</a> for more information. Happy coding!</p>
+                <h1 id="300-todochangelog">3.0.0 Todo/Changelog</h1>
+<ul>
+<li>[x] Engine</li>
+<li>[x] Window<ul>
+<li>[x] Create window</li>
+<li>[x] Get data from window</li>
+</ul>
+</li>
+<li>[x] Draw shapes</li>
+<li>[x] Draw images</li>
+<li>[x] Input</li>
+<li>[x] Storage system</li>
+<li>[x] Rendering options</li>
+<li>[x] Delta-Time</li>
+<li>[x] Pip package and SetupTools</li>
+<li>[x] Cython<ul>
+<li>[x] Implement cython for extra speed</li>
+<li>[x] Dev version without cython</li>
+</ul>
+</li>
+<li>[x] Vectors (stores x and y coordinates)<ul>
+<li>[x] Create vector</li>
+</ul>
+</li>
+<li>[x] GUI library<ul>
+<li>[x] Text</li>
+<li>[x] Drawing (Build in draw function)</li>
+<li>[x] Buttons</li>
+</ul>
+</li>
+<li>[x] Sound system<ul>
+<li>[x] Sound player</li>
+<li>[x] File support</li>
+<li>[x] And more...</li>
+</ul>
+</li>
+</ul>
                 
               
               

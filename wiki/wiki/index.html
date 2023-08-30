@@ -590,16 +590,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-pygame" class="md-nav__link">
-    Using pygame
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#quit" class="md-nav__link">
     Quit
   </a>
+  
+    <nav class="md-nav" aria-label="Quit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#force-to-quit" class="md-nav__link">
+    Force to quit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -810,13 +816,12 @@ Its the same option 1, but you change the font to name of the font, like this:</
 </ul>
 <pre><code class="language-python">main.ui.text.print_text(window, &quot;Your text&quot;, 10, 10, &quot;Arial&quot;, 20, main.color.WHITE)
 </code></pre>
-<h2 id="using-pygame">Using pygame</h2>
-<p>If you cant find some function you need in this engine, the you could use pygame as the engine is build on pygame. You dont need to import pygame, as that can make so issues, you just use:</p>
-<pre><code class="language-python">fusion.pg
-</code></pre>
-<p>Make sure your not using main (the initialized class) but the module itself.</p>
 <h2 id="quit">Quit</h2>
 <p>The quitting of the engine is done automaticly for you, so you dont have to worry about it.</p>
+<h3 id="force-to-quit">Force to quit</h3>
+<p>If you want to force quit due to some reason, its pretty easy:</p>
+<pre><code class="language-python">main.window.force_quit()
+</code></pre>
                 
               
               
